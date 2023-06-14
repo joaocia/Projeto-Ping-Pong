@@ -120,7 +120,6 @@
                         this._pointUp()
                     }
                 }
-
                 // Verifica se o Jogador 2 fez um ponto (x < 0)
                 if (this.x < this.r + leftPaddle.w + gapX) {
                     // verifica se a raquete esquerda está na posição Y da bola
@@ -136,18 +135,17 @@
                         this._pointUp()
                     }
                 }
-
-                // Verifica as laterais superior e inferior do campo
                 if(
                     (this.y - this.r < 0 && this.directionY < 0) ||
                     (this.y > field.h - this.r && this.directionY > 0)
+                    // Verifica as laterais superior e inferior do campo
                     ) {
                     // rebate e bola invertendo o sinal do eixo Y    
                     this._reverseY()
                 }
             },
             _reverseX: function() {
-
+            
                 this.directionX *= -1
             },
             _reverseY: function() {
@@ -177,10 +175,9 @@
                 this._move()
             },
         }
-
         function setup() {
-         canvasEl.width = canvasCtx.width = field.w
-         canvasEl.height = canvasCtx.height = field.h
+        canvasEl.width = canvasCtx.width = field.w
+        canvasEl.height = canvasCtx.height = field.h
         }
         
         function draw() {
@@ -191,7 +188,6 @@
          score.draw()
          ball.draw()
         }
-
         window.animateFrame = (function () {
             return (
                 window.requestAnimationFrame ||
@@ -220,3 +216,7 @@
                  </script>
             </body>
         </html>        
+
+
+
+
